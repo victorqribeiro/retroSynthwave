@@ -1,6 +1,4 @@
-let canvas, c, w, h, u
-
-let points, offset, spacing, centerX, centerY, gradient
+let canvas, c, w, h, u, points, offset, spacing, gradient
 
 function init() {
   canvas = document.createElement('canvas')
