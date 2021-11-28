@@ -13,25 +13,18 @@ function init() {
   points = Array(30).fill(0).map(_ => Array(60).fill(0))
   for (let i = 0; i < points.length; i++) {
     for (let j = 0; j < points[0].length; j++) {
-      points[i][j] = {x: j * spacing, y: 50, z: -i * 10}
+      const dist = Math.abs(j - points[0].length / 2)
+      points[i][j] = {
+        x: j * spacing,
+        y: Math.random() * -(dist*dist) + 30, 
+        z: -i * 10
+      }
     }
   }
   offset = points[0].length * spacing / 2
-  centerX = points[0].length / 2
-  conterY = points.length / 2
-  
-  for (let i = 0; i < points.length; i++) {
-    for (let j = 0; j < points[0].length; j++) {
-      const dist = Math.abs(j - points[0].length / 2)
-      points[i][j].y = Math.random() * -(dist*dist) + 30
-    }
-  }
-  
   gradient = c.createLinearGradient(0, -150, 0, 100);
-  
   gradient.addColorStop(0, 'gold')
   gradient.addColorStop(1, 'rgb(200, 0, 100)')
-  
   update(0)
 }
 
@@ -54,7 +47,6 @@ function update(time) {
      points.unshift( arr )
     }
   }
-  
   show()
   u = requestAnimationFrame(update)
 }
@@ -81,7 +73,7 @@ function show() {
       c.closePath()
       const color = 300 + points[i][j].z
       c.fillStyle = `rgba(0, 0, 0, ${-points[i][j].z / 100})`
-      c.strokeStyle = `rgba(${250 - color}, 0, ${50 + color}, ${1-color / 300})`
+      c.strokeStyle = `rgba(${250 - color}, 0, ${50 + color}, ${1 - color / 300})`
       c.fill()
       c.stroke()
     } 
