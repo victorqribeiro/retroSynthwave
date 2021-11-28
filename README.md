@@ -2,7 +2,8 @@
 
 ![screenshot](screenshot.png)
 
-[live version](https://victorribeiro.com/random4)
+[live version](https://victorribeiro.com/random4)  
+[alternative link](https://victorqribeiro.github.io/retroSynthwave/)  
 
 ## About
 
