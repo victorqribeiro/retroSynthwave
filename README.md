@@ -11,6 +11,7 @@ This is a project I've been working on for a while, one hour or less at at time.
 
 ### Can I use it on my videos?
 Yes, set up a record screen software and capture away.
+E.g.: [https://www.youtube.com/watch?v=ztv--KzSGDc](https://www.youtube.com/watch?v=ztv--KzSGDc)
 
 ### Can I use it as a backgroud?
 Yes, press F11 to enter full screen mode, reload the page and take a screen shot.
